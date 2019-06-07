@@ -9,17 +9,19 @@ using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using Newtonsoft.Json;
 
-namespace Recurly.Resources {
-  [ExcludeFromCodeCoverage] 
-  public class InvoiceMini : Resource {
-  
-    /// <value>Invoice number</value>
-    [JsonProperty("number")]
-    public string Number { get; set; }
-  
-    /// <value>Invoice state</value>
-    [JsonProperty("state")]
-    public string State { get; set; }
-  
-  }
+namespace Recurly.Resources
+{
+    [ExcludeFromCodeCoverage]
+    public class InvoiceMini : Resource
+    {
+
+        /// <value>Invoice number</value>
+        [JsonProperty("number")]
+        public string Number { get; set; }
+
+        /// <value>Invoice state</value>
+        [JsonProperty("state")]
+        public string State { get; set; }
+
+    }
 }

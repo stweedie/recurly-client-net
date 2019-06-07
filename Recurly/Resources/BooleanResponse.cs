@@ -9,13 +9,15 @@ using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using Newtonsoft.Json;
 
-namespace Recurly.Resources {
-  [ExcludeFromCodeCoverage] 
-  public class BooleanResponse : Resource {
-  
-    
-    [JsonProperty("success")]
-    public bool? Success { get; set; }
-  
-  }
+namespace Recurly.Resources
+{
+    [ExcludeFromCodeCoverage]
+    public class BooleanResponse : Resource
+    {
+
+
+        [JsonProperty("success")]
+        public bool? Success { get; set; }
+
+    }
 }
