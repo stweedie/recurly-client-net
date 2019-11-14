@@ -342,7 +342,7 @@ namespace Recurly
         /// Previously named next_renewal_date. Specifies a future date that 
         /// the subscriptions next billing period should be billed.
         /// </summary>
-        public DateTime NextBillDate { get; private set; }
+        public DateTime NextBillDate { get; set; }
 
         /// <summary>
         /// Start date of the subscriptions current term. Will equal the future start
@@ -962,6 +962,9 @@ namespace Recurly
 
             if (UnitAmountInCents.HasValue)
                 xmlWriter.WriteElementString("unit_amount_in_cents", UnitAmountInCents.Value.AsString());
+
+            if (NextBillDate != DateTime.MinValue)
+                xmlWriter.WriteElementString("next_bill_date", NextBillDate.ToString());
 
             xmlWriter.WriteElementString("quantity", Quantity.AsString());
 
